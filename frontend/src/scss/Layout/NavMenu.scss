@@ -1,0 +1,85 @@
+@import '../config';
+
+aside.nav-menu {
+   background: #252525;
+   border: 1px solid #404040;
+   position: absolute;
+   right: 0;
+   transform: translateX(100%);
+   top: 100%;
+   height: calc(100vh - 67px);
+   width: 320px;
+   max-width: 100%;
+   transition: .3s ease;
+   z-index: 999;
+   font-size: clamp(.9rem, 4vw, 1rem);
+
+   ul {
+      list-style: none;
+
+      li {
+         transition: .3s;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         font-weight: 400;
+
+         &:not(.expand) {
+            padding: 1em;
+         }
+
+         svg { 
+            margin-right: 1em;
+            width: 20px;
+            height: 20px;
+         }
+
+         &:hover {
+            background: #303030;
+         }
+
+         &.expand {
+            position: relative;
+            display: block;
+
+            ol {
+               overflow: hidden;
+               height: 0;
+               transition: .4s;
+               background: #212121;
+
+               li {
+                  padding: 1em 3em;
+               }
+            }
+
+            div {
+               display: flex;
+               height: inherit;
+               align-items: center;
+               position: relative;
+               pointer-events: none;
+               padding: 1em;
+
+               svg {
+                  &:last-child {
+                     position: absolute;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     right: 0;
+                     transition: .3s;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   figure {
+      height: 10%;
+      @include flex-c-c;
+      img { height: 80%; display: block; }
+      background: #1f1f1f;
+      border-bottom: 1px solid #404040;
+   }
+}

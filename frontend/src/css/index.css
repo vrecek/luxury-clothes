@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+div.App {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #171717;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 3px;
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: royalblue;
+}
+
+.moveFromLeft {
+  -webkit-animation: moveFromLeft 2s;
+          animation: moveFromLeft 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.moveFromRight {
+  -webkit-animation: moveFromRight 2s;
+          animation: moveFromRight 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes moveFromRight {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/*
+   @media (max-width: 1200px) {
+
+   }
+
+   @media (max-width: 1024px) {
+
+   }
+
+   @media (max-width: 768px) {
+
+   }
+
+   @media (max-width: 480px) {
+
+   }
+*/

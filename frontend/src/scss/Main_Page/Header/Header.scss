@@ -1,0 +1,148 @@
+@import '../../config';
+
+header.main-page-header {
+   height: calc(100vh - 65px);
+   background: rgb(23, 23, 23);
+   position: relative;
+   display: flex;
+   align-items: center;
+   border-bottom: 2px solid rgb(20, 20, 20);
+
+   section {
+      width: 610px;
+      max-width: 100%;
+      margin: 0 clamp(.1em, 2vw, 2em);
+      z-index: 9;
+      animation: show 2s;
+      
+      @keyframes show {
+         0% { transform: translateX(-150%); }
+         100% { transform: translateX(0) }
+      }
+
+      h1 {
+         font-size: clamp(2.5rem, 8vw, 3.5rem);
+         font-weight: 100;
+         text-shadow: 0 0 2px #505050, 0 0 4px #505050, 0 0 8px #505050, 0 0 16px #505050;
+         filter: blur(1px);
+         line-height: 1em;
+
+         span { color: royalblue; }
+      }
+
+      p.header-text {
+         text-shadow: 0 0 2px #505050, 0 0 4px #505050;
+         font-size: 1.2rem;
+         margin: 1em 0;
+         filter: blur(.4px);
+         font-family: 'Hubballi', cursive;
+      }
+
+      div {
+         @include flex-sb-c;
+
+         button.btn {
+            width: 45%;
+            font-size: clamp(1rem, 5vw, 1.2rem);
+            border-radius: .5em;
+            outline: 0;
+            text-shadow: 0 0 2px black;
+            color: white;
+            @include flex-sb-c;
+            height: 62px;
+            cursor: pointer; 
+            overflow: hidden;
+            transition: .4s;
+
+            &.btn-shop {
+               background: #6B5B95;
+               span { svg { color: #6B5B95; } }
+               border: 1px solid #6B5B95;
+            }
+
+            &.btn-learn {
+               background: #34568B;
+               span { svg { color: #34568B; } }
+               border: 1px solid #34568B;
+            }
+
+            span {
+               background: rgb(238, 235, 235);
+               @include flex-c-c;
+               width: 22%;
+               height: 100%;
+               border-radius: 0 .5em .5em 0;
+               transition: .4s;
+
+               svg { height: 30px; width: 30px; }
+            }
+
+            label {
+               pointer-events: none;
+               margin-left: .5em;
+               transition: .4s;
+               position: relative;
+               left: 0;
+            }
+
+            &:hover {
+               background: #348b47;
+
+               label { 
+                  position: relative;
+                  left:22%;
+               }
+
+               span {
+                  transform: translateX(120%);
+               }
+            }
+         }
+      }
+   }
+
+   figure {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      overflow: hidden;
+      max-width: 100%;
+      @include flex-c-c;
+      animation: show2 2s;
+
+      img {
+         height: 100%;
+      }
+
+      @keyframes show2 {
+         0% { transform: translateX(150%); }
+         100% { transform: translateX(0) }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   header.main-page-header {
+      section {
+         h1 {
+            text-align: center;
+            filter: blur(.8px);
+         }
+
+         p.header-text {
+            text-align: center;
+         }
+
+         div {
+            flex-direction: column;
+
+            button.btn {
+               width: 250px;
+               max-width: 95%;
+               margin-bottom: 1em;
+            }
+         }
+      }
+   }
+}

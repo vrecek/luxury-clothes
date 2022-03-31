@@ -1,0 +1,24 @@
+@mixin flex-sb-c {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin flex-sa-c {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+@mixin flex-c-c {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin abs-50-50 {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}

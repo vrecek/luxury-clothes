@@ -1,0 +1,232 @@
+header.main-page-header {
+  height: calc(100vh - 65px);
+  background: #171717;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #141414;
+}
+
+header.main-page-header section {
+  width: 610px;
+  max-width: 100%;
+  margin: 0 clamp(0.1em, 2vw, 2em);
+  z-index: 9;
+  -webkit-animation: show 2s;
+          animation: show 2s;
+}
+
+@-webkit-keyframes show {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header.main-page-header section h1 {
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-weight: 100;
+  text-shadow: 0 0 2px #505050, 0 0 4px #505050, 0 0 8px #505050, 0 0 16px #505050;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  line-height: 1em;
+}
+
+header.main-page-header section h1 span {
+  color: royalblue;
+}
+
+header.main-page-header section p.header-text {
+  text-shadow: 0 0 2px #505050, 0 0 4px #505050;
+  font-size: 1.2rem;
+  margin: 1em 0;
+  -webkit-filter: blur(0.4px);
+          filter: blur(0.4px);
+  font-family: 'Hubballi', cursive;
+}
+
+header.main-page-header section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.main-page-header section div button.btn {
+  width: 45%;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  border-radius: .5em;
+  outline: 0;
+  text-shadow: 0 0 2px black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 62px;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header.main-page-header section div button.btn.btn-shop {
+  background: #6B5B95;
+  border: 1px solid #6B5B95;
+}
+
+header.main-page-header section div button.btn.btn-shop span svg {
+  color: #6B5B95;
+}
+
+header.main-page-header section div button.btn.btn-learn {
+  background: #34568B;
+  border: 1px solid #34568B;
+}
+
+header.main-page-header section div button.btn.btn-learn span svg {
+  color: #34568B;
+}
+
+header.main-page-header section div button.btn span {
+  background: #eeebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22%;
+  height: 100%;
+  border-radius: 0 .5em .5em 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header.main-page-header section div button.btn span svg {
+  height: 30px;
+  width: 30px;
+}
+
+header.main-page-header section div button.btn label {
+  pointer-events: none;
+  margin-left: .5em;
+  -webkit-transition: .4s;
+  transition: .4s;
+  position: relative;
+  left: 0;
+}
+
+header.main-page-header section div button.btn:hover {
+  background: #348b47;
+}
+
+header.main-page-header section div button.btn:hover label {
+  position: relative;
+  left: 22%;
+}
+
+header.main-page-header section div button.btn:hover span {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+header.main-page-header figure {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: show2 2s;
+          animation: show2 2s;
+}
+
+header.main-page-header figure img {
+  height: 100%;
+}
+
+@-webkit-keyframes show2 {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes show2 {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  header.main-page-header section h1 {
+    text-align: center;
+    -webkit-filter: blur(0.8px);
+            filter: blur(0.8px);
+  }
+  header.main-page-header section p.header-text {
+    text-align: center;
+  }
+  header.main-page-header section div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header.main-page-header section div button.btn {
+    width: 250px;
+    max-width: 95%;
+    margin-bottom: 1em;
+  }
+}

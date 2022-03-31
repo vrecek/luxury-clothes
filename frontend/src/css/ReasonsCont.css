@@ -1,0 +1,121 @@
+.reasons-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #262829 0%, #0c0c0c 74%);
+}
+
+.reasons-container article {
+  background: #161616;
+  border: 2px solid #222222;
+  width: clamp(300px, 32vw, 380px);
+  height: clamp(300px, 38vw, 450px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 90%;
+}
+
+.reasons-container article span.separate {
+  width: 100%;
+  height: 2px;
+  background: #505050;
+}
+
+.reasons-container article p {
+  text-align: center;
+  color: #707070;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 4vw, 1rem);
+}
+
+.reasons-container article h3 {
+  font-family: 'Hubbali', cursive;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  color: #b6b6b6;
+  text-shadow: 0 0 20px white;
+}
+
+.reasons-container article button {
+  width: 60%;
+  background: none;
+  border-radius: 1em;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  padding: .5em 0;
+  outline: 0;
+  border: 2px solid royalblue;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.reasons-container article button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: #004268;
+}
+
+.reasons-container article button label {
+  color: royalblue;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.reasons-container article span.icon {
+  width: clamp(50px, 18vw, 70px);
+  height: clamp(50px, 18vw, 70px);
+  border-radius: 50%;
+  border: 1px solid #303030;
+  background: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reasons-container article span.icon svg {
+  width: 75%;
+  height: 75%;
+  color: #909090;
+}
+
+@media (max-width: 1024px) {
+  .reasons-container {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reasons-container article {
+    width: 350px;
+    height: clamp(300px, 90vw, 400px);
+    margin: 1em 0;
+  }
+}

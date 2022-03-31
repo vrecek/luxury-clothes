@@ -1,0 +1,99 @@
+@import '../../config';
+
+section.cards-container {
+   height: 100vh;
+   @include flex-sa-c;
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      left:0;
+      bottom:0;
+      height: 50%;
+      width: 100%;
+      background: rgb(27, 27, 27);
+      border-radius: 20% 20% 0 0;
+      z-index: -1;
+   }
+
+   article.cards-text {
+      width: 30%;
+
+      section.line {
+         margin: 2em auto;
+         width: 50%;
+         height: 2px;
+         background: royalblue;
+      }
+
+      h1 {
+         font-size: clamp(1rem, 2vw, 2rem);
+         text-align: center;
+         margin-bottom: .5em;
+         color: royalblue;
+         border-bottom: 1px solid royalblue;
+      }
+
+      p {
+         text-align: justify;
+         font-size: clamp(.8rem, 1vw, .9rem);
+      }
+   }
+
+   article.cards-cards {
+      width: 55%;
+
+      section.card-row {
+         @include flex-sb-c;
+
+         &:first-child {
+            margin-bottom: 1em;
+         }
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   section.cards-container {
+      flex-direction: column;
+      height: auto;
+
+      &::after {
+         content: '';
+         position: absolute;
+         left:0;
+         top:0;
+         height: 40%;
+         width: 100%;
+         background: rgb(27, 27, 27);
+         border-radius: 0 0 20% 20%;
+         z-index: -1;
+      }
+
+      article.cards-cards {
+         width: 98%;
+         margin-top: 2em;
+      }
+
+      article.cards-text {
+         width: 95%;
+
+         p {
+            text-align: center;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   section.cards-container {
+      padding: 2em 0;
+      
+      article.cards-cards {
+         section.card-row {
+            flex-direction: column;
+         }
+      }
+   }
+}
