@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/luxury-clothes/static/css/main.2194d46e.css",
+    "main.js": "/luxury-clothes/static/js/main.1d0201bf.js",
+    "static/js/787.0ea6414f.chunk.js": "/luxury-clothes/static/js/787.0ea6414f.chunk.js",
+    "static/media/s2.png": "/luxury-clothes/static/media/s2.542e9719eddeaeb8ff7e.png",
+    "static/media/shop.png": "/luxury-clothes/static/media/shop.47c853b096f849fc3c08.png",
+    "static/media/card1.png": "/luxury-clothes/static/media/card1.e7fcb0bff4167b1648a8.png",
+    "static/media/aboutman1.png": "/luxury-clothes/static/media/aboutman1.c273ba3dba30c5357137.png",
+    "static/media/s1.png": "/luxury-clothes/static/media/s1.068269047ebf1054b7c1.png",
+    "static/media/header.png": "/luxury-clothes/static/media/header.bf6811cf649fb5177900.png",
+    "static/media/card2.png": "/luxury-clothes/static/media/card2.12648ce29a78ca3b3887.png",
+    "static/media/s3.png": "/luxury-clothes/static/media/s3.25108bceb0e4eaa81e1c.png",
+    "static/media/s4.png": "/luxury-clothes/static/media/s4.deec550c08b7f1776fac.png",
+    "static/media/newBrandLogo.png": "/luxury-clothes/static/media/newBrandLogo.2ce312ec51b7d05764b7.png",
+    "static/media/brand4.png": "/luxury-clothes/static/media/brand4.8a7d7d619c7d22330a55.png",
+    "static/media/card3.png": "/luxury-clothes/static/media/card3.8d2081d577e2112a9231.png",
+    "static/media/card6.png": "/luxury-clothes/static/media/card6.59045b4b7577982833ae.png",
+    "static/media/brand1.png": "/luxury-clothes/static/media/brand1.6ce83678f87d96b438a8.png",
+    "static/media/card4.png": "/luxury-clothes/static/media/card4.ee0c551f675cab633eef.png",
+    "static/media/card5.png": "/luxury-clothes/static/media/card5.8227c857b5fb6f63d44b.png",
+    "static/media/logo.png": "/luxury-clothes/static/media/logo.99249356de51a5f9b152.png",
+    "static/media/brand2.png": "/luxury-clothes/static/media/brand2.bc41f5aea78c6b9b7849.png",
+    "index.html": "/luxury-clothes/index.html",
+    "main.2194d46e.css.map": "/luxury-clothes/static/css/main.2194d46e.css.map",
+    "main.1d0201bf.js.map": "/luxury-clothes/static/js/main.1d0201bf.js.map",
+    "787.0ea6414f.chunk.js.map": "/luxury-clothes/static/js/787.0ea6414f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2194d46e.css",
+    "static/js/main.1d0201bf.js"
+  ]
+}
