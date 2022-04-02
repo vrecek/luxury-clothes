@@ -1,7 +1,8 @@
 import React from 'react'
 import Button from '../../reusable/Button'
+import ReasonType from '../../../interfaces/reason_interface'
 
-const Reason = ({ icon, text, btnText, ifText}:any) => {
+const Reason = ({ icon, text, btnText, ifText}:ReasonType) => {
    return (
       <article>
          <span className='icon'>{ icon }</span>

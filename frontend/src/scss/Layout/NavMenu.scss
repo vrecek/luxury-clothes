@@ -23,6 +23,7 @@ aside.nav-menu {
          display: flex;
          align-items: center;
          font-weight: 400;
+         background: #252525;
 
          &:not(.expand) {
             padding: 1em;
@@ -46,10 +47,14 @@ aside.nav-menu {
                overflow: hidden;
                height: 0;
                transition: .4s;
-               background: #212121;
 
                li {
                   padding: 1em 3em;
+                  background: #212121;
+
+                  &:hover {
+                     background: #303030;
+                  }
                }
             }
 

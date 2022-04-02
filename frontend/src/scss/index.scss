@@ -1,6 +1,8 @@
 // font-family: 'Hubballi', cursive;
 // font-family: 'Manrope', sans-serif;
 
+@import './config';
+
 * {
    margin: 0;
    padding: 0;
@@ -27,6 +29,28 @@ body {
       width: 100%;
       background: royalblue;
    }
+}
+
+.arrowup {
+   position: fixed;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: -100%;
+   background: orangered;
+   width: 45px;
+   height: 20px;
+   @include flex-c-c;
+   z-index: 999999;
+   border-radius: 50% 50% 0 0;
+   cursor: pointer;
+   transition: 1s;
+   pointer-events: none;
+
+   &:hover {
+      background: orange;
+   }
+
+   svg { width: 25px; height: 25px; }
 }
 
 .moveFromLeft {

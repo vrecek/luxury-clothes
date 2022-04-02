@@ -8,29 +8,17 @@ import NavMenu from './NavMenu'
 import NavIcons from './NavIcons'
 import NavSearch from './NavSearch'
 import NavLinks from './NavLinks'
+import { Navigation } from '../../functions/UsefulClasses'
 
 const Nav = () => {
+  const navigate = new Navigation()
+
   const showMenu = (e:React.MouseEvent):void => {
     const t = e.target as HTMLElement
-
-    const spans:Array<HTMLElement> = Array.from(t.children).map(x => x as HTMLElement)
-    
-    t.classList.toggle('clicked')
-    const isClicked:boolean = t.classList.contains('clicked')
-
     const menu = t.parentElement?.parentElement?.lastChild as HTMLElement
-    menu.style.transform = `translateX(${ isClicked ? 0 : 100 }%)`
 
-    const top:Array<number> = isClicked ? [50, 50, 50] : [0, 50, 100]
-    const rotate:Array<number> = isClicked ? [50, 50, 130] : [0, 0, 0]
-
-    for(let i = 0; i <= 2; i++) {
-      Object.assign(spans[i].style, {
-        top: `${ top[i] }%`,
-        transform: `translateY(-50%) rotate(${ rotate[i] }deg)`,
-        background: isClicked ? 'red' : 'white'
-      })
-    }
+    navigate.animateThreeLines(t.children)
+    navigate.showMenu(menu)
   }
 
   const toggleSearch = (e:React.MouseEvent) => {

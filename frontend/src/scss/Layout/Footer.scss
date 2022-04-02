@@ -1,0 +1,206 @@
+@import '../config';
+
+$svg_colors: (
+   1: "royalblue",
+   2: "cornflowerblue",
+   3: "#4400ff",
+   4: "brown"
+);
+
+footer {
+   background: #080808;
+   border-top: 2px solid rgb(87, 87, 87);
+
+   section.infos {
+      background: #0f0f0f;
+      @include flex-sa-c;
+      padding: 3em 0;
+
+      .logo,
+      .contact,
+      .subscribe {
+         width: 22%;
+      }
+
+      .logo {
+         figure {
+            height: 75px;
+            img { height: 100%; }
+         }
+
+         p {
+            color: #808080;
+            font-size: clamp(1rem, 4vw, 1.1rem);
+            font-family: 'Hubballi', cursive;
+            margin: 1em 0 1.5em 0;
+         }
+
+         ol {
+            list-style: none;
+            @include flex-sa-c;
+
+            li {
+               svg {
+                  width: 25px;
+                  height: 25px;
+                  color: #909090;
+                  transition: .4s;
+                  cursor: pointer;
+               }
+
+               @each $i, $x in $svg_colors {
+                  &:nth-child(#{$i}) {
+                     :hover {
+                        color: #{$x};
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      ul {
+         width: max-content;
+         list-style: none;
+
+         li {
+            &.first-li {
+               font-size: 1.6rem;
+               font-weight: 700;
+               pointer-events: none;
+               margin-bottom: .1em;
+            }
+
+            &:not(.first-li) {
+               color: #959595;
+               transition: .3s;
+               cursor: pointer;
+               font-size: .95rem;
+               margin-bottom: .3em;
+               font-weight: 400;
+
+               &:hover {
+                  color: royalblue;
+               }
+            }
+         }
+      }
+
+      .contact {
+         h3 {
+            font-family: 'Hubballi', cursive;
+            font-size: 1.1rem;
+            color:#959595;
+            border-bottom: 1px solid #959595;
+            width: max-content;
+            margin-bottom: .5em;
+         }
+
+         p {
+            background: #090909;
+            padding: 1em .5em;
+            margin-bottom: .1em;
+            font-size: .85rem;
+         }
+      }
+      
+      .subscribe {
+         h4 {
+            text-align: center;
+            font-family: 'Hubballi', cursive;
+            font-size: 1.2rem;
+            color: #a3a3a3;
+         }
+
+         p {
+            margin: 1em 0;
+            font-size: .85rem;
+            color:#c7c7c7
+         }
+
+         div {
+            position: relative;
+            
+            button {
+               position: absolute;
+               right: 10px;
+               top: 50%;
+               transform: translateY(-50%);
+               outline: 0;
+               border: 0;
+               background: none;
+               cursor: pointer;
+
+               label { 
+                  font-weight: 700; 
+                  color: orangered; 
+                  text-transform: uppercase; 
+                  transition: .3s; 
+                  cursor: pointer; 
+                  font-size: 1rem; 
+               }
+
+               &:hover label {
+                  color: royalblue;
+               }
+            }
+
+            input {
+               width: 100%;
+               background: none;
+               border: 2px solid orangered;
+               padding: 1em .5em;
+               border-radius: .25em;
+               outline: 0;
+               color:rgb(133, 133, 133);
+               font-family: 'Hubballi', cursive;
+               font-size: 1.1rem;
+            }
+         }
+      }
+   }
+
+   section.paragraphs {
+      padding: 3em 1em;
+      background: #181818;
+      @include flex-sb-c;
+
+      p {
+         font-weight: 700;
+         color:#505050;
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   footer {
+      section.infos {
+         flex-direction: column;
+
+         .logo,
+         .contact,
+         .subscribe {
+            width: 450px;
+            max-width: 95%;
+            margin-bottom: 3em;
+         }
+
+         ul {
+            margin-bottom: 3em;
+         }
+
+         .logo {
+            figure { img { margin: 0 auto; display: block; } }
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   footer {
+      section.infos {
+         .logo { p { text-align: center; } }
+         .subscribe { p { text-align: center; } }
+      }
+   }
+}
